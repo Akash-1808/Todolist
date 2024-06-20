@@ -33,7 +33,7 @@ void remove_task(int i) {
 
     auto it = std::find(todo_list[i].task.begin(), todo_list[i].task.end(), task_name);
     if (it != todo_list[i].task.end()) {
-        todo_list[i].task.erase(it); // Erase using iterator
+        todo_list[i].task.erase(it); 
         std::cout << "Task '" << task_name << "' removed successfully.\n";
     } else {
         std::cout << "Task '" << task_name << "' not found.\n";
@@ -142,9 +142,9 @@ void remove_() {
     bool found = false;
     for (auto it = todo_list.begin(); it != todo_list.end(); ++it) {
         if (it->Todo_name == todo_name) {
-            it = todo_list.erase(it); // erase returns the iterator to the next element
+            it = todo_list.erase(it); 
             found = true;
-            break; // exit loop since we found and erased the element
+            break; 
         }
     }
 
